@@ -1,0 +1,35 @@
+﻿Full Stack (MERN)
+Create an application to display blog articles with the following features,
+* Home page - Should show all the articles on the basis of the latest article first, user should be able to know if he is logged in or not. If not logged in he should be able to log in.
+* Login Screen
+* Sign up Screen
+* If the user is logged in, the route '/user/username'  should show him his profile with all the articles he published. Else he will be taken to the home page
+* The user should be able to create a new article if and only if he is logged in at the route '/publish'. Else he will be taken to the home page
+ 
+Extra Points: 
+* Add tags with the articles published and the route ‘/tags/<tagname>’ should give all the articles which contain the tag name
+ 
+ Note:  
+* Use JWT for authorization 
+* For authentication, you can use what you prefer
+* To view the published articles on the home page that are published by others, users login feature is not required
+* Take only the basic information of the user such as email address, username, name, and age
+*  If the user is not logged in any unintended route(eg, /user/username or /publish) will take him to the home screen.
+ 
+
+Backend (NodeJS, ExpressJS, MongoDB)
+Determine and create the APIs which is to be provided to the frontends to complete the above project. 
+Note:
+* Try to make the APIs as loosely coupled as possible
+
+
+Important:
+* Create a public GitHub repo for the project which would later be used for submission
+   * For the Full Stack project, create both client and server-side on the same repo
+* If possible host the application
+   * If hosted, add links for hosted applications in the readme file
+
+
+ Assignment Review: 
+* Code quality and architecture will be given preference 
+* You can take the help of Google but you should be able to explain yourself when asked 
