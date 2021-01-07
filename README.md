@@ -7,9 +7,11 @@ For local development
 2.``` npm start```
 3.Test out in postman
 
+HostLink : http://52.66.195.32:3000/api/
+
 ## APIs [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/fb392e00f24328b20c0d)
 
-Common Endpoint: ```localhost:3000/api```
+Common Endpoint: ```52.66.195.32/api```
 
 ### User
 
