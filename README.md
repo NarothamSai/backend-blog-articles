@@ -2,8 +2,10 @@ Requirements:
 1.node
 2.mongodb
 
-``` npm install```
-``` npm start```
+For local development
+1.``` npm install```
+2.``` npm start```
+3.Test out in postman
 
 ## APIs [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/fb392e00f24328b20c0d)
 
