@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "dac1fd25-de86-4064-b17a-5f267546160c",
+		"name": "backend-blog-articles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sai.narotham999@gmail.com\",\r\n    \"name\" : \"narotham\",\r\n    \"username\" : \"narotham\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/user/signup",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "signup user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sai.narotham999@gmail.com\",\r\n    \"name\" : \"narotham\",\r\n    \"username\" : \"narotham\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/user/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-X6WUh71hIXedrnuIFPCiXvUSRJ4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 15:52:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The user has been signedup\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFyb3RoYW0iLCJfaWQiOiI1ZmY3MmU1MmUzMDQ2YTBkYzAxNjFlOWQifSwiaWF0IjoxNjEwMDM0NzcwfQ.5SR--0YffaB4HYj_8UbpGUnKCOms1pbw78bOFvblUEc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFyb3RoYW0iLCJfaWQiOiI1ZmY3MmU1MmUzMDQ2YTBkYzAxNjFlOWQifSwiaWF0IjoxNjEwMDM1NTI5fQ.nbAGmOBMVtXKr8NS1hC1njVafNuLbuHW7lam_mxf11I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/user/",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/user/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "247"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f7-jUEPH0FRzJ/uPaG4hy4IrGYKqXs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 17:35:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"articleIds\": [\n            \"5ff742ccd1200c0098d3b46e\"\n        ],\n        \"_id\": \"5ff72e52e3046a0dc0161e9d\",\n        \"email\": \"sai.narotham999@gmail.com\",\n        \"name\": \"narotham\",\n        \"username\": \"narotham\",\n        \"createdAt\": \"2021-01-07T15:52:50.557Z\",\n        \"updatedAt\": \"2021-01-07T17:20:12.904Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "sai.narotham999@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"type": "any"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/user/login",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/user/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cb-m4GD58LFQj+p+r2nLrA6pX3puiU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 16:05:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFyb3RoYW0iLCJfaWQiOiI1ZmY3MmU1MmUzMDQ2YTBkYzAxNjFlOWQifSwiaWF0IjoxNjEwMDM1NTI5fQ.nbAGmOBMVtXKr8NS1hC1njVafNuLbuHW7lam_mxf11I\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "article",
+			"item": [
+				{
+					"name": "Publish article",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoibmFyb3RoYW0iLCJfaWQiOiI1ZmY3MmU1MmUzMDQ2YTBkYzAxNjFlOWQifSwiaWF0IjoxNjEwMDM1NTI5fQ.nbAGmOBMVtXKr8NS1hC1njVafNuLbuHW7lam_mxf11I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"title for blog\",\r\n    \"body\" : {\"text\" : \"Hi. This is my first blog. Thank you.\"},\r\n    \"tags\" : [\"First Blog\",\"Creative\", \"Technology\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/article/publish",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"publish"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Publish article",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\" : \"title for blog\",\r\n    \"body\" : {\"text\" : \"Hi. This is my first blog. Thank you.\"},\r\n    \"tags\" : [\"First Blog\",\"Creative\", \"Technology\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/article/publish",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"publish"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "85"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"55-hgBZiCHPU82Fe8NtivOkf8RJPwI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 17:20:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"article_id\": \"5ff742ccd1200c0098d3b46e\",\n    \"message\": \"The article has been published.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all articles for home page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/article/",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all articles for home page",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/article/",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "845"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34d-Jd8ZAChRajnp3BqwYMo/4wHaf1k\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 17:19:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articles\": [\n        {\n            \"body\": {\n                \"text\": \"Hi. This is my first blog. Thank you.\"\n            },\n            \"tags\": [\n                \"First Blog\",\n                \"Creative\",\n                \"Technology\"\n            ],\n            \"_id\": \"5ff742ae9599622990dbe7be\",\n            \"title\": \"title for blog\",\n            \"author\": {\n                \"name\": \"narotham\"\n            },\n            \"createdAt\": \"2021-01-07T17:19:42.182Z\",\n            \"updatedAt\": \"2021-01-07T17:19:42.182Z\",\n            \"__v\": 0\n        },\n        {\n            \"body\": {\n                \"text\": \"Hi. This is my first blog. Thank you.\"\n            },\n            \"tags\": [\n                \"First Blog\",\n                \"Creative\",\n                \"Technology\"\n            ],\n            \"_id\": \"5ff74168b6293b33b85f2def\",\n            \"title\": \"title for blog\",\n            \"author\": {\n                \"name\": \"narotham\"\n            },\n            \"createdAt\": \"2021-01-07T17:14:16.709Z\",\n            \"updatedAt\": \"2021-01-07T17:14:16.709Z\",\n            \"__v\": 0\n        },\n        {\n            \"body\": {\n                \"text\": \"Hi. This is my first blog. Thank you.\"\n            },\n            \"tags\": [\n                \"First Blog\",\n                \"Creative\",\n                \"Technology\"\n            ],\n            \"_id\": \"5ff73f4ef87b0021f4a28bf2\",\n            \"title\": \"title for blog\",\n            \"author\": {\n                \"name\": \"narotham\"\n            },\n            \"createdAt\": \"2021-01-07T17:05:18.791Z\",\n            \"updatedAt\": \"2021-01-07T17:05:18.791Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://52.66.195.32:3000/api/article/5ff742ccd1200c0098d3b46e",
+							"protocol": "http",
+							"host": [
+								"52",
+								"66",
+								"195",
+								"32"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"5ff742ccd1200c0098d3b46e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One article",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/article/5ff742ccd1200c0098d3b46e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"5ff742ccd1200c0098d3b46e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-BI5BNYfW8K5UQrpJ+V9xHi7Lx9g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 Jan 2021 17:35:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"article\": {\n        \"body\": {\n            \"text\": \"Hi. This is my first blog. Thank you.\"\n        },\n        \"tags\": [\n            \"First Blog\",\n            \"Creative\",\n            \"Technology\"\n        ],\n        \"_id\": \"5ff742ccd1200c0098d3b46e\",\n        \"title\": \"title for blog\",\n        \"author\": {\n            \"name\": \"narotham\"\n        },\n        \"createdAt\": \"2021-01-07T17:20:12.894Z\",\n        \"updatedAt\": \"2021-01-07T17:20:12.894Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
