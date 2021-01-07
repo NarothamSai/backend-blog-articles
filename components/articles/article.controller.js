@@ -39,3 +39,27 @@ exports.get = (req, res) => {
       res.status(404).send({ message: err.message });
     });
 };
+
+exports.getOne = (req, res) => {
+  articleModel
+    .findById(req.params.articleId)
+    .populate({ path: "author", select: "name -_id" })
+    .then((article) => {
+      if (article) {
+        res.status(200).send({ article: article });
+      } else {
+        res
+          .status(404)
+          .send({
+            message: "Article not found with id" + req.params.articleId + ".",
+          });
+      }
+    })
+    .catch((err) => {
+      res
+        .status(404)
+        .send({
+          message: "Article not found with id" + req.params.articleId + ".",
+        });
+    });
+};

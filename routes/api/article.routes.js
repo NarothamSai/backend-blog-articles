@@ -6,6 +6,8 @@ let authController = require("../../components/auth/auth.controller");
 
 router.get("/", articleController.get);
 
+router.get("/:articleId", articleController.getOne);
+
 router.post(
   "/publish",
   authController.isJWTAuthenticated,

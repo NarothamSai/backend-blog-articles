@@ -7,7 +7,7 @@ const UserSchema = instance.Schema(
   {
     about: String,
     age: Number,
-    articleIds: [ObjectId],
+    articleIds: { type: [ObjectId], ref: "article" },
     email: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     password: { type: String, required: true },
