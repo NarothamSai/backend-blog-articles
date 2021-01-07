@@ -1,4 +1,5 @@
 const articleModel = require("./article.model");
+const { userModel } = require("../user");
 
 exports.publish = (req, res) => {
   let { user } = req;
@@ -11,10 +12,28 @@ exports.publish = (req, res) => {
   article
     .save()
     .then((article) => {
+      userModel
+        .findByIdAndUpdate(user._id, {
+          $push: { articleIds: article._id },
+        })
+        .then();
       res.status(200).send({
         article_id: article._id,
         message: "The article has been published.",
       });
+    })
+    .catch((err) => {
+      res.status(404).send({ message: err.message });
+    });
+};
+
+exports.get = (req, res) => {
+  articleModel
+    .find({})
+    .sort({ _id: -1 })
+    .populate({ path: "author", select: "name -_id" })
+    .then((articles) => {
+      res.status(200).send({ articles: articles });
     })
     .catch((err) => {
       res.status(404).send({ message: err.message });

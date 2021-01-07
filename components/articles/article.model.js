@@ -5,7 +5,7 @@ const ObjectId = instance.Schema.Types.ObjectId;
 const articleSchema = instance.Schema(
   {
     title: { type: String, required: true },
-    author: ObjectId,
+    author: { type: ObjectId, ref: "user" },
     body: { text: String },
     tags: [String],
   },
