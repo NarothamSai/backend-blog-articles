@@ -7,12 +7,12 @@ For local development
 2.``` npm start```
 3.Test out in postman
 
-HostLink : http://52.66.195.32:3000/api/
+HostLink : https://narotham.ml:3000/api/
 Check out in local postman by importing postman collection in repo
 
 ## APIs [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.postman.co/run-collection/fb392e00f24328b20c0d)
 
-Common Endpoint: ```52.66.195.32/api```
+Common Endpoint: ```https://narotham.ml:3000/api```
 
 ### User
 
