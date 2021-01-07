@@ -1,17 +1,16 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-let userRoute = require('./user.routes');
-let articleRoute = require('./article.routes')
+let userRoute = require("./user.routes");
+let articleRoute = require("./article.routes");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
-router.use('/articles',articleRoute);
+router.use("/articles", articleRoute);
 
-router.use('/user',userRoute);
-
+router.use("/user", userRoute);
 
 module.exports = router;

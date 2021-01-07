@@ -3,7 +3,7 @@ const instance = dbConnect.blogDB;
 const ObjectId = instance.Schema.Types.ObjectId;
 const bcrypt = require("bcrypt");
 
-const userSchema = instance.Schema(
+const UserSchema = instance.Schema(
   {
     about: String,
     age: Number,
@@ -18,13 +18,13 @@ const userSchema = instance.Schema(
   }
 );
 
-userSchema.methods.verifyPassword = function (password, cb) {
+UserSchema.methods.verifyPassword = function (password, cb) {
   bcrypt.compare(password, this.password, function (err, isMatch) {
     if (err) return cb(err);
     cb(null, isMatch);
   });
 };
 
-let user = instance.model("user", userSchema);
+let user = instance.model("user", UserSchema);
 
 module.exports = user;
