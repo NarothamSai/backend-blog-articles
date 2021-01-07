@@ -7,11 +7,11 @@ const UserSchema = instance.Schema(
   {
     about: String,
     age: Number,
-    articles_id: [ObjectId],
-    email: { type: String, required: true },
+    articleIds: [ObjectId],
+    email: { type: String, required: true, unique: true },
     name: { type: String, required: true },
     password: { type: String, required: true },
-    username: { type: String, required: true },
+    username: { type: String, required: true, unique: true },
   },
   {
     timestamps: true,
