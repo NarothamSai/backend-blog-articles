@@ -9,7 +9,7 @@ Requirements:
 
 Common Endpoint: ```localhost:3000/api```
 
-- User
+### User
 
 1. Signup user
 
@@ -32,7 +32,7 @@ METHOD: GET
 Authoristation :Bearer <jwt>
 ```
 
-- Article
+### Article
 1. Publish Article
 ```
 Endpoint : /article/publish
